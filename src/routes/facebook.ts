@@ -6,5 +6,6 @@ const router = Router();
 // Ruta para login con Facebook
 router.post('/', loginFacebook);
 
+
 export default router;
    

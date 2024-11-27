@@ -2,9 +2,6 @@ import { Request, Response } from 'express';
 import Usuario from '../models/usuario';
 import jwt from 'jsonwebtoken'
 
-
-
-
 export const loginUser =     async (req: Request, res: Response) => {
     try {
         const { Emp_Email, Contrasenia } = req.body;
@@ -24,6 +21,7 @@ export const loginUser =     async (req: Request, res: Response) => {
             });
         }
 
+        
         //Generamos un token
         const token = jwt.sign({
             username: usuario
