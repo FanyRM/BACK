@@ -1,6 +1,6 @@
 import { DataTypes } from 'sequelize';
 import db from '../db/connection';
-
+ //aas
 const Dato = db.define('Dato', {
     Banc_Nom: {
         type: DataTypes.STRING

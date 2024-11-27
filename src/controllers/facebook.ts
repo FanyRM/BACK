@@ -3,7 +3,7 @@ import Usuario from '../models/usuario';  // Asegúrate de que el modelo Usuario
 import jwt from 'jsonwebtoken';
 import axios from 'axios';
 
-
+//hola
 // Función de login con Facebook adaptada a la base de datos Mr_macondo
 export const loginFacebook = async (req: Request, res: Response) => {
     const { accessToken } = req.body;  // Extraer el token de acceso del cuerpo de la solicitud
