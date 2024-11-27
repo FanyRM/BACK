@@ -27,6 +27,7 @@ const distribuidors_1 = __importDefault(require("../routes/distribuidors"));
 const notas_1 = __importDefault(require("../routes/notas"));
 const usuario_1 = __importDefault(require("../routes/usuario"));
 const cliente_1 = __importDefault(require("../routes/cliente"));
+const facebook_1 = __importDefault(require("../routes/facebook")); // Nueva ruta de Facebook
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -47,6 +48,7 @@ class Server {
                 msg: 'API Working'
             });
         });
+        // Agregamos todas las rutas de la API
         this.app.use('/api/sucursales', sucursal_1.default);
         this.app.use('/api/productos', producto_1.default);
         this.app.use('/api/ventas', venta_1.default);
@@ -56,14 +58,15 @@ class Server {
         this.app.use('/api/datos', dato_1.default);
         this.app.use('/api/tip_Prod', tip_prods_1.default);
         this.app.use('/api/distribuidors', distribuidors_1.default);
-        this.app.use('/api/Notas', notas_1.default);
+        this.app.use('/api/notas', notas_1.default);
         this.app.use('/api/login', usuario_1.default);
         this.app.use('/api/clientes', cliente_1.default);
+        this.app.use('/api/facebook', facebook_1.default); // Nueva ruta de Facebook
     }
     midlewares() {
-        //Parseamos el body
+        // Parseamos el body
         this.app.use(express_1.default.json());
-        //Cors
+        // Cors
         this.app.use((0, cors_1.default)());
     }
     dbConnect() {
@@ -74,7 +77,7 @@ class Server {
             }
             catch (error) {
                 console.log(error);
-                console.log('Error al conectase a la base de datos');
+                console.log('Error al conectarse a la base de datos');
             }
         });
     }

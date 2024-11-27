@@ -4,6 +4,7 @@ import { loginFacebook } from '../controllers/facebook'; // Asegúrate de que el
 const router = Router();
 
 // Ruta para login con Facebook
-router.post('/login/facebook', loginFacebook);
+router.post('/', loginFacebook);
 
 export default router;
+   

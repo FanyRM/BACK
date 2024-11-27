@@ -1,12 +1,14 @@
 import { Router } from 'express';
 import { loginUser } from '../controllers/usuario';
-import { loginFacebook } from '../controllers/facebook'; // Asegúrate de que la ruta sea correcta
-
+import { loginFacebook } from '../controllers/facebook'; // Ajustamos la ruta del controlador
 
 const routerLogin = Router();
 const routerFacebook = Router();
-routerFacebook.post('/login/facebook', loginFacebook);
 
+// Ruta para login con usuario y contraseña
 routerLogin.post('/', loginUser);
+
+// Ruta para login con Facebook
+routerFacebook.post('/', loginFacebook);
 
 export default routerLogin;

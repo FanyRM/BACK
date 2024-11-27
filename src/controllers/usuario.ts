@@ -5,7 +5,7 @@ import jwt from 'jsonwebtoken'
 
 
 
-export const loginUser = async (req: Request, res: Response) => {
+export const loginUser =     async (req: Request, res: Response) => {
     try {
         const { Emp_Email, Contrasenia } = req.body;
 
