@@ -14,6 +14,7 @@ import routernotas from '../routes/notas';
 import routerLogin from '../routes/usuario';
 import routerCliente from '../routes/cliente';
 import routerFacebook from '../routes/facebook'; // Nueva ruta de Facebook
+import routerEmail from '../routes/email';
 
 class Server {
     private app: Application;
@@ -56,6 +57,7 @@ class Server {
         this.app.use('/api/login', routerLogin);
         this.app.use('/api/clientes', routerCliente);
         this.app.use('/api/facebook', routerFacebook); // Nueva ruta de Facebook
+        this.app.use('/api/emails', routerEmail);
     }
 
     midlewares() {

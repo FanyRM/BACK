@@ -14,6 +14,12 @@ const Sucursal = db.define('Sucursal', {
     Img_Suc: {
         type: DataTypes.STRING
     },
+    Latitud: {
+        type: DataTypes.DOUBLE
+    },
+    Longitud: {
+        type: DataTypes.DOUBLE
+    }
 }, {
     createdAt: false,
     updatedAt: false,
