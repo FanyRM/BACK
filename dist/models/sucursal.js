@@ -18,6 +18,12 @@ const Sucursal = connection_1.default.define('Sucursal', {
     Img_Suc: {
         type: sequelize_1.DataTypes.STRING
     },
+    Latitud: {
+        type: sequelize_1.DataTypes.DOUBLE
+    },
+    Longitud: {
+        type: sequelize_1.DataTypes.DOUBLE
+    }
 }, {
     createdAt: false,
     updatedAt: false,

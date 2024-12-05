@@ -28,6 +28,7 @@ const notas_1 = __importDefault(require("../routes/notas"));
 const usuario_1 = __importDefault(require("../routes/usuario"));
 const cliente_1 = __importDefault(require("../routes/cliente"));
 const facebook_1 = __importDefault(require("../routes/facebook")); // Nueva ruta de Facebook
+const email_1 = __importDefault(require("../routes/email"));
 class Server {
     constructor() {
         this.app = (0, express_1.default)();
@@ -37,6 +38,7 @@ class Server {
         this.routes();
         this.dbConnect();
     }
+    //hola
     listen() {
         this.app.listen(this.port, () => {
             console.log(`Aplicacion corriendo en el puerto ${this.port}`);
@@ -62,6 +64,7 @@ class Server {
         this.app.use('/api/login', usuario_1.default);
         this.app.use('/api/clientes', cliente_1.default);
         this.app.use('/api/facebook', facebook_1.default); // Nueva ruta de Facebook
+        this.app.use('/api/emails', email_1.default);
     }
     midlewares() {
         // Parseamos el body
